@@ -1,3 +1,6 @@
+import HeroSection from "@/components/HeroSection";
+import HeroSectionImage from "@/components/HeroSectionImage";
+import MainContent from "@/components/MainContent";
 import TopNavbar from "@/components/TopNavbar";
 import TopNavbarIcons from "@/components/TopNavbarIcons";
 import TopNavbarLogo from "@/components/TopNavbarLogo";
@@ -11,6 +14,11 @@ export default function Home() {
                 <TopNavbarMenu />
                 <TopNavbarIcons />
             </TopNavbar>
+            <MainContent>
+                <HeroSection>
+                    <HeroSectionImage />
+                </HeroSection>
+            </MainContent>
         </>
     );
 }
