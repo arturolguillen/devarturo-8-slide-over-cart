@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import HeroSectionContent from "@/components/HeroSectionContent";
 import HeroSectionImage from "@/components/HeroSectionImage";
 import MainContent from "@/components/MainContent";
 import TopNavbar from "@/components/TopNavbar";
@@ -17,6 +18,7 @@ export default function Home() {
             <MainContent>
                 <HeroSection>
                     <HeroSectionImage />
+                    <HeroSectionContent />
                 </HeroSection>
             </MainContent>
         </>
