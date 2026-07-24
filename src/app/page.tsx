@@ -2,6 +2,8 @@ import HeroSection from "@/components/HeroSection";
 import HeroSectionContent from "@/components/HeroSectionContent";
 import HeroSectionImage from "@/components/HeroSectionImage";
 import MainContent from "@/components/MainContent";
+import ProductSection from "@/components/ProductSection";
+import ProductSectionTitle from "@/components/ProductSectionTitle";
 import TopNavbar from "@/components/TopNavbar";
 import TopNavbarIcons from "@/components/TopNavbarIcons";
 import TopNavbarLogo from "@/components/TopNavbarLogo";
@@ -20,6 +22,9 @@ export default function Home() {
                     <HeroSectionImage />
                     <HeroSectionContent />
                 </HeroSection>
+                <ProductSection>
+                    <ProductSectionTitle />
+                </ProductSection>
             </MainContent>
         </>
     );
