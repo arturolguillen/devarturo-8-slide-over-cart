@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import HeroSectionContent from "@/components/HeroSectionContent";
 import HeroSectionImage from "@/components/HeroSectionImage";
 import MainContent from "@/components/MainContent";
+import ProductGrid from "@/components/ProductGrid";
 import ProductSection from "@/components/ProductSection";
 import ProductSectionTitle from "@/components/ProductSectionTitle";
 import TopNavbar from "@/components/TopNavbar";
@@ -24,6 +25,9 @@ export default function Home() {
                 </HeroSection>
                 <ProductSection>
                     <ProductSectionTitle />
+                    <ProductGrid>
+                        <></>
+                    </ProductGrid>
                 </ProductSection>
             </MainContent>
         </>
