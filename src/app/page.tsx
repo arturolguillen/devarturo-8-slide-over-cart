@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import HeroSectionContent from "@/components/HeroSectionContent";
 import HeroSectionImage from "@/components/HeroSectionImage";
@@ -37,6 +38,7 @@ export default function Home() {
                     </ProductGrid>
                 </ProductSection>
             </MainContent>
+            <Footer />
         </>
     );
 }
