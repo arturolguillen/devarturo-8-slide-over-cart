@@ -1,3 +1,5 @@
+import CartOverlay from "@/components/CartOverlay";
+import CartOverlayHeader from "@/components/CartOverlayHeader";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import HeroSectionContent from "@/components/HeroSectionContent";
@@ -39,6 +41,9 @@ export default function Home() {
                 </ProductSection>
             </MainContent>
             <Footer />
+            <CartOverlay>
+                <CartOverlayHeader />
+            </CartOverlay>
         </>
     );
 }
