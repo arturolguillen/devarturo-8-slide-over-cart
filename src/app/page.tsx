@@ -1,6 +1,8 @@
+import CartItemList from "@/components/CartItemList";
 import CartOverlay from "@/components/CartOverlay";
 import CartOverlayHeader from "@/components/CartOverlayHeader";
 import Footer from "@/components/Footer";
+import FreeShippingProgress from "@/components/FreeShippingProgress";
 import HeroSection from "@/components/HeroSection";
 import HeroSectionContent from "@/components/HeroSectionContent";
 import HeroSectionImage from "@/components/HeroSectionImage";
@@ -43,6 +45,8 @@ export default function Home() {
             <Footer />
             <CartOverlay>
                 <CartOverlayHeader />
+                <FreeShippingProgress />
+                <CartItemList />
             </CartOverlay>
         </>
     );
