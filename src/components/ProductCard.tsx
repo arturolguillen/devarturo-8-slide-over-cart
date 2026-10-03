@@ -1,3 +1,4 @@
+import { formatPrice } from "@/lib/format";
 import { type Product } from "@/products";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
@@ -17,7 +18,7 @@ export default function ProductCard({ product }: {
             <h3 className="text-xl font-bold mb-1 text-slate-800">{product.name}</h3>
             <p className="text-slate-500 text-sm mb-4">{product.description}</p>
             <div className="flex justify-between items-center">
-                <span className="text-xl font-bold text-emerald-600">{product.price}</span>
+                <span className="text-xl font-bold text-emerald-600">{formatPrice(product.price)}</span>
                 <button type="button" className="bg-emerald-50 text-emerald-600 p-2.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-colors">
                     <ShoppingCart />
                 </button>

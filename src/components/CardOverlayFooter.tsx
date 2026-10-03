@@ -6,7 +6,7 @@ export default function CardOverlayFooter() {
             <div className="space-y-3 mb-6">
                 <div className="flex justify-between text-slate-600 text-sm font-medium">
                     <span>Subtotal</span>
-                    <span>$80.00</span>
+                    <span className="cart-subtotal">$80.00</span>
                 </div>
                 <div className="flex justify-between text-slate-600 text-sm font-medium">
                     <span>Envío</span>
@@ -14,7 +14,7 @@ export default function CardOverlayFooter() {
                 </div>
                 <div className="flex justify-between items-center pt-3 border-t border-slate-200">
                     <span className="text-lg font-bold text-slate-800">{'Total'}</span>
-                    <span className="text-2xl font-bold text-emerald-600">$80.00</span>
+                    <span className="text-2xl font-bold text-emerald-600 cart-total">$80.00</span>
                 </div>
             </div>
             <button

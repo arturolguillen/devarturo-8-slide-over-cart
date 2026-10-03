@@ -7,7 +7,7 @@ export type Product = {
     id: number;
     name: string;
     description: string;
-    price: string;
+    price: number;
     image: StaticImageData;
 };
 
@@ -16,21 +16,21 @@ const products: Product[] = [
         id: 1,
         name: 'Pure Whey Isolate',
         description: 'Vanilla Bean | 2lb',
-        price: '$45.00',
+        price: 45,
         image: PureWheyIsolateImage,
     },
     {
         id: 2,
         name: 'Daily Vitality Multi',
         description: '60 Capsules | Vegan',
-        price: '$35.00',
+        price: 35,
         image: DailyVitalityMultiImage,
     },
     {
         id: 3,
         name: 'Omega Plus Liquid',
         description: 'Lemon Fresh | 250ml',
-        price: '$28.00',
+        price: 28,
         image: OmegaPlusLiquidImage,
     },
 ];
