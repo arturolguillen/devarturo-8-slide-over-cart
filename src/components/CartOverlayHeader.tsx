@@ -1,4 +1,7 @@
+"use client";
+
 import { X } from "lucide-react";
+import { closeCart } from "@/lib/cart";
 
 export default function CartOverlayHeader() {
     return (
@@ -7,7 +10,7 @@ export default function CartOverlayHeader() {
                 <h2 className="text-2xl font-bold text-slate-800">{'Your Cart'}</h2>
                 <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">{'Health is wealth'}</p>
             </div>
-            <button type="button" className="p-2 hover:bg-slate-100 rounded-full transition-colors">
+            <button type="button" onClick={closeCart} aria-label="Close cart" className="p-2 hover:bg-slate-100 rounded-full transition-colors">
                 <X />
             </button>
         </header>

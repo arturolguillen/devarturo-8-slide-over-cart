@@ -28,7 +28,7 @@ export default function RootLayout({
             lang="en"
             className={`${inter.variable} ${outfit.variable} antialiased`}
         >
-            <body className="min-h-dvh flex flex-col font-sans bg-slate-50 text-slate-900 overflow-x-hidden cart-open">
+            <body className="min-h-dvh flex flex-col font-sans bg-slate-50 text-slate-900 overflow-x-hidden [&.cart-open]:overflow-hidden">
                 {children}
             </body>
         </html>
