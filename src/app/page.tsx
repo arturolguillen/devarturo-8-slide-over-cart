@@ -1,3 +1,4 @@
+import CardOverlayFooter from "@/components/CardOverlayFooter";
 import CartItemList from "@/components/CartItemList";
 import CartOverlay from "@/components/CartOverlay";
 import CartOverlayHeader from "@/components/CartOverlayHeader";
@@ -47,6 +48,7 @@ export default function Home() {
                 <CartOverlayHeader />
                 <FreeShippingProgress />
                 <CartItemList />
+                <CardOverlayFooter />
             </CartOverlay>
         </>
     );
