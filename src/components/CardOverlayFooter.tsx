@@ -1,20 +1,26 @@
+"use client";
+
+import { useCart } from "@/components/CartProvider";
+import { formatPrice } from "@/lib/format";
 import { ArrowRight } from "lucide-react";
 
 export default function CardOverlayFooter() {
+    const { subtotal } = useCart();
+
     return (
         <div className="px-6 py-8 bg-slate-50 border-t border-slate-100">
             <div className="space-y-3 mb-6">
                 <div className="flex justify-between text-slate-600 text-sm font-medium">
-                    <span>Subtotal</span>
-                    <span className="cart-subtotal">$80.00</span>
+                    <span>{'Subtotal'}</span>
+                    <span>{formatPrice(subtotal)}</span>
                 </div>
                 <div className="flex justify-between text-slate-600 text-sm font-medium">
-                    <span>Envío</span>
-                    <span className="text-emerald-600 font-bold">{'Calculado al checkout'}</span>
+                    <span>{'Shipping'}</span>
+                    <span className="text-emerald-600 font-bold">{'Calculated at checkout'}</span>
                 </div>
                 <div className="flex justify-between items-center pt-3 border-t border-slate-200">
                     <span className="text-lg font-bold text-slate-800">{'Total'}</span>
-                    <span className="text-2xl font-bold text-emerald-600 cart-total">$80.00</span>
+                    <span className="text-2xl font-bold text-emerald-600">{formatPrice(subtotal)}</span>
                 </div>
             </div>
             <button

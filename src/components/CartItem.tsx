@@ -1,16 +1,19 @@
 "use client";
 
-import { changeQuantity } from "@/lib/cart";
+import { useCart } from "@/components/CartProvider";
 import { formatPrice } from "@/lib/format";
 import { type Product } from "@/products";
 import { Minus, Plus, Trash } from "lucide-react";
 import Image from "next/image";
 
-export default function CartItem({ product }: {
+export default function CartItem({ product, quantity }: {
     product: Product;
+    quantity: number;
 }) {
+    const { changeQuantity } = useCart();
+
     return (
-        <div className="flex gap-4 group" data-price={product.price}>
+        <div className="flex gap-4 group">
             <div className="w-20 h-20 bg-slate-50 rounded-xl overflow-hidden shrink-0 border border-slate-100">
                 <Image alt={product.name} className="w-full h-full object-cover" src={product.image} />
             </div>
@@ -27,15 +30,15 @@ export default function CartItem({ product }: {
                         <button
                             type="button"
                             aria-label="Decrease quantity"
-                            onClick={(e) => changeQuantity(e.currentTarget, -1)}
+                            onClick={() => changeQuantity(product.id, -1)}
                             className="w-6 h-6 flex items-center justify-center text-slate-600 hover:text-emerald-600 transition-colors">
                             <Minus size={16} />
                         </button>
-                        <span className="text-sm font-bold w-6 text-center qty-value">1</span>
+                        <span className="text-sm font-bold w-6 text-center">{quantity}</span>
                         <button
                             type="button"
                             aria-label="Increase quantity"
-                            onClick={(e) => changeQuantity(e.currentTarget, 1)}
+                            onClick={() => changeQuantity(product.id, 1)}
                             className="w-6 h-6 flex items-center justify-center text-slate-600 hover:text-emerald-600 transition-colors">
                             <Plus size={16} />
                         </button>

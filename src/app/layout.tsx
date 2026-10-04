@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
+import CartProvider from "@/components/CartProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,7 +30,7 @@ export default function RootLayout({
             className={`${inter.variable} ${outfit.variable} antialiased`}
         >
             <body className="min-h-dvh flex flex-col font-sans bg-slate-50 text-slate-900 overflow-x-hidden [&.cart-open]:overflow-hidden">
-                {children}
+                <CartProvider>{children}</CartProvider>
             </body>
         </html>
     );
